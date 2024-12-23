@@ -1,0 +1,6 @@
+<section class="container">
+@for (pokemon of pokemonList(); track pokemon.id) {
+    <app-pokemon-small [pokemon]="pokemon"></app-pokemon-small>
+}
+    
+</section>

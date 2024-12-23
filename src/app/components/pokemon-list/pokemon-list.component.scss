@@ -1,0 +1,9 @@
+@import url(./../../../utils.scss);
+
+section {
+    margin-top: 48px;
+    display: grid;
+    gap: 16px;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(144px, 1fr));
+}

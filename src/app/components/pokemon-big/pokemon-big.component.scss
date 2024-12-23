@@ -1,0 +1,19 @@
+@import url(./../../../utils.scss);
+
+.pokemon-big{
+    margin-top: 60px;
+}
+
+.title-container{
+display: flex;
+justify-content: space-between;
+margin-bottom: 30px;
+color: #2d2f56;
+text-align: center;
+}
+
+.chart {
+    margin-top: 20px;
+    display: block;
+    height: 100%;
+}
