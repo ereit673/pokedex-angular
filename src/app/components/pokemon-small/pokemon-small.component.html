@@ -1,5 +1,5 @@
-<div class="pokemon-container">
+<button class="pokemon-container" (click)="onSelectPokemon(pokemon())">
     <img [src]="pokemon().imgPath" alt="">
     <h2>{{ pokemon().name }}</h2>
     <h3>{{ pokemon().id }}</h3>
-</div>
+</button>

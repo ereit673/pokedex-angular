@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { Pokemon } from '../models/pokemon.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PokemonService {
+  bigPokemonOpened = signal<Pokemon | undefined>(undefined);
   pokemonList: Pokemon[] = [
     {
       name: 'Pikachu',
@@ -49,4 +50,14 @@ export class PokemonService {
   ];
 
   constructor() {}
+
+  openPokemon(pokemon: Pokemon){
+    this.bigPokemonOpened.set(pokemon);
+    console.log(this.bigPokemonOpened());
+  }
+
+  closePokemon(){
+    this.bigPokemonOpened.set(undefined);
+    console.log(this.bigPokemonOpened());
+  }
 }

@@ -1,6 +1,10 @@
-<!-- <app-header></app-header>
+@if(bigPokemonOpened() === undefined){
+<app-header></app-header>
 <main>
-<app-search-pokemon></app-search-pokemon>
-<app-pokemon-list></app-pokemon-list>
-</main> -->
-<app-pokemon-big></app-pokemon-big>
+  <app-search-pokemon></app-search-pokemon>
+  <app-pokemon-list></app-pokemon-list>
+</main>
+} @else {
+<app-pokemon-big [pokemon]="bigPokemonOpened()"></app-pokemon-big>
+
+}

@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { AgCharts } from 'ag-charts-angular';
 import { AgBarSeriesOptions, AgChartOptions } from 'ag-charts-community';
+import { PokemonService } from '../../services/pokemon.service';
+import { Pokemon } from '../../models/pokemon.model';
 
 interface IData {
   month: string;
@@ -15,6 +17,8 @@ interface IData {
   styleUrl: './pokemon-big.component.scss',
 })
 export class PokemonBigComponent {
+  private pokemonService = inject(PokemonService);
+  pokemon = input.required<Pokemon | undefined>()
   public chartOptions: AgChartOptions;
   constructor() {
     this.chartOptions = {
@@ -36,6 +40,13 @@ export class PokemonBigComponent {
           yKey: 'ovr',
         } as AgBarSeriesOptions,
       ],
+      background: {
+        fill: '#F5FBFB',
+      },
     };
+  }
+
+  onClosePokemon(){
+    this.pokemonService.closePokemon();
   }
 }

@@ -1,8 +1,10 @@
 .pokemon-container{
+    display: block;
     text-align: center;
     background-color: #C4E3D4;
     padding: 16px;
-    border-radius: 20px;;
+    border-radius: 20px;
+    width: 100%;
 
     img{
         width: 100px;

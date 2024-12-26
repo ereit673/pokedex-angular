@@ -1,6 +1,7 @@
 <section class="container pokemon-big">
-    <div class="title-container">
-        <svg
+  <div class="title-container">
+    <button (click)="onClosePokemon()">
+      <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -15,14 +16,14 @@
           d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
         />
       </svg>
-  <div>
-      <h2>Venusaur</h2>
-      <p>003</p>
-  </div>
-  <div></div>
+    </button>
+    <div>
+      <h2>{{ pokemon()?.name }}</h2>
+      <p>{{ pokemon()?.id }}</p>
     </div>
-  <img src="/pokemon.webp" alt="" />
-  <ag-charts class="chart"
-    [options]="chartOptions">
-   </ag-charts>
+    <div></div>
+  </div>
+  <img [src]="pokemon()?.imgPath" alt="" />
+  <h3>Stats</h3>
+  <ag-charts class="chart" [options]="chartOptions"> </ag-charts>
 </section>

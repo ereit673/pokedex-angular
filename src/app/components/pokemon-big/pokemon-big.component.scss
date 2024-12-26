@@ -2,11 +2,19 @@
 
 .pokemon-big{
     margin-top: 60px;
+    max-width: 400px;
+}
+
+img{
+    height: 200px;
+    width: auto;
+    margin-inline: auto;
 }
 
 .title-container{
 display: flex;
 justify-content: space-between;
+align-items: center;
 margin-bottom: 30px;
 color: #2d2f56;
 text-align: center;
@@ -15,5 +23,39 @@ text-align: center;
 .chart {
     margin-top: 20px;
     display: block;
-    height: 100%;
+    margin-inline: auto;
+    border-radius: 10px;
 }
+
+h2{
+    font-size: 1.5rem;
+}
+
+h3{
+    text-align: center;
+    font-size: 1.2rem;
+    color: #2d2f56;
+    margin-top: 20px;
+}
+
+//  xs
+//  @media (min-width: 475px) {}
+
+//  sm
+//  @media (min-width: 640px) {}
+
+//  md
+ @media (min-width: 768px) {
+    h2{
+        font-size: 2rem;
+    }
+ }
+
+//  lg
+//  @media (min-width: 1024px) {}
+
+//  xl
+//  @media (min-width: 1280px) {}
+
+//  2xl
+//  @media (min-width: 1536px) {}
